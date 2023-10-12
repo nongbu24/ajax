@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax</title>
+	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+</head>
+<body>
+	<input type="text" id="email"><span id="result"></span>
+	<script>
+		$("#email").on("useremail", function(){
+			var email = $("#email").val();
+			var regex = /\w+@\w\.\w+/;
+			
+			if(regex.exec(email) == null){
+				<!-- 3. email 형식에 맞지 않다면 span 태그에 "이메일 형식에 맞지 않습니다." 를 출력하고 return 한다.-->
+				$("#email").____(" ");
+
+				return;
+			}
+
+<!-- 4. 만약 email 형식에 맞는다면, Controller의 CheckEmail Method 으로 {email : "입력값"} 을 비동기 전송한다.-->
+
+			$.ajax({
+				url:" ",
+				data:{email: $("#email").___()},
+				success:function(resp){
+
+<!-- 10. 서버로 보낸 비동기 요청에 따른 응답이 돌아오면 그 결과값을 span 태그에 출력한다.-->
+
+				$("#______").____(____);
+			}
+			
+		})
+		
+	})
+</script>
+</body>
+</html>
